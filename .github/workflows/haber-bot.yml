@@ -1,0 +1,61 @@
+name: Haber Botu + Pages Yayını
+
+on:
+  schedule:
+    # Her 2 saatte bir (yoğunluğu düşük tutmak için; istenirse sıklaştırılabilir)
+    - cron: "7 */2 * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main, master]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kodu al
+        uses: actions/checkout@v4
+
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Bağımlılıklar
+        run: pip install -r requirements.txt
+
+      - name: Botu çalıştır
+        run: python bot.py --crawl 8 --verbose
+
+      - name: Pages yapısı hazırla
+        run: |
+          mkdir -p public/feeds
+          cp index.html public/
+          cp haberler.json bot-raporu.json config.json public/
+          cp -r assets public/
+          cp feeds/*.xml public/feeds/
+
+      - name: Pages'e yükle
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  yayinla:
+    needs: bot
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Yayınla
+        id: deployment
+        uses: actions/deploy-pages@v4

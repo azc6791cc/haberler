@@ -1,0 +1,246 @@
+{
+  "surum": "2.1",
+  "son_guncelleme": "2026-10-05T09:59:08.175259+00:00",
+  "sure_saniye": 56.2,
+  "toplam_haber": 400,
+  "kaynak_sayisi": 31,
+  "aktif_kaynak": 30,
+  "besleme_sayisi": 56,
+  "kazanilan_tam_metin": 331,
+  "tam_metin_haber": 378,
+  "video_haber": 41,
+  "kategoriler": {
+    "Gündem": 216,
+    "Kocaeli": 18,
+    "Ekonomi": 33,
+    "Spor": 42,
+    "Dünya": 60,
+    "Teknoloji": 19,
+    "Yapay Zeka": 5,
+    "Sağlık": 2,
+    "Yaşam & Sanat": 3,
+    "Son Dakika": 2
+  },
+  "kaynaklar": {
+    "Anadolu Ajansı": {
+      "haber": 100,
+      "durum": "aktif",
+      "basarili": 5,
+      "hatali": 0,
+      "hata": null
+    },
+    "NTV": {
+      "haber": 120,
+      "durum": "aktif",
+      "basarili": 6,
+      "hatali": 0,
+      "hata": null
+    },
+    "Sabah": {
+      "haber": 50,
+      "durum": "aktif",
+      "basarili": 5,
+      "hatali": 0,
+      "hata": null
+    },
+    "TRT Haber": {
+      "haber": 30,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "CNN Türk": {
+      "haber": 100,
+      "durum": "aktif",
+      "basarili": 5,
+      "hatali": 0,
+      "hata": null
+    },
+    "Hürriyet": {
+      "haber": 100,
+      "durum": "aktif",
+      "basarili": 5,
+      "hatali": 0,
+      "hata": null
+    },
+    "Sözcü": {
+      "haber": 100,
+      "durum": "aktif",
+      "basarili": 5,
+      "hatali": 0,
+      "hata": null
+    },
+    "BBC Türkçe": {
+      "haber": 20,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "Habertürk": {
+      "haber": 20,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "FotoMac": {
+      "haber": 20,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "Teknoloji Oku": {
+      "haber": 20,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "Webrazzi": {
+      "haber": 15,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "Korkuşuz": {
+      "haber": 20,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "ShiftDelete": {
+      "haber": 20,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "Halk TV": {
+      "haber": 20,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "Euronews": {
+      "haber": 20,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "A Haber": {
+      "haber": 20,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "Evrensel": {
+      "haber": 20,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "BirGün": {
+      "haber": 20,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "Aydınlık": {
+      "haber": 20,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "Sözcü Son Dakika": {
+      "haber": 10,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "MyNet": {
+      "haber": 20,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "İnternet Haber": {
+      "haber": 20,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "Oda TV": {
+      "haber": 20,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "Artı Gerçek": {
+      "haber": 20,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "Gazete Duvar": {
+      "haber": 20,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "Özgür Kocaeli": {
+      "haber": 20,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "Bugün Kocaeli": {
+      "haber": 30,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "En Kocaeli": {
+      "haber": 20,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "Demokrat Kocaeli": {
+      "haber": 19,
+      "durum": "aktif",
+      "basarili": 1,
+      "hatali": 0,
+      "hata": null
+    },
+    "Milliyet": {
+      "haber": 0,
+      "durum": "hata",
+      "basarili": 0,
+      "hatali": 1,
+      "hata": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1032)>"
+    }
+  },
+  "hatalar": [
+    "Milliyet (https://www.milliyet.com.tr/rss/rssnew/sondakikarss.xml): <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1032)>"
+  ]
+}

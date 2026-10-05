@@ -1,0 +1,560 @@
+{
+  "bot": {
+    "ad": "GÜNDEM Haber Botu",
+    "surum": "2.1",
+    "zaman_asimi_saniye": 15,
+    "calisan_sayisi": 8,
+    "tekrar_dene": 1,
+    "kaydirma_saniye": 0.15,
+    "maksimum_haber": 400,
+    "son_dakika_suresi_dakika": 45,
+    "tam_metin_kazimi": true,
+    "tam_metin_siniri": 0,
+    "sayfa_metin_siniri": 20000,
+    "kazimi_calisani": 8,
+    "feed_uret": true
+  },
+
+  "kategoriler": [
+    "Gündem",
+    "Kocaeli",
+    "Ekonomi",
+    "Spor",
+    "Dünya",
+    "Teknoloji",
+    "Yapay Zeka",
+    "Sağlık",
+    "Yaşam & Sanat",
+    "Son Dakika"
+  ],
+
+  "kaynaklar": [
+    {
+      "id": "aa",
+      "ad": "Anadolu Ajansı",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.aa.com.tr/tr/rss/default?cat=guncel",
+          "kategori": "Gündem",
+          "limit": 20
+        },
+        {
+          "url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+          "kategori": "Ekonomi",
+          "limit": 20
+        },
+        {
+          "url": "https://www.aa.com.tr/tr/rss/default?cat=spor",
+          "kategori": "Spor",
+          "limit": 20
+        },
+        {
+          "url": "https://www.aa.com.tr/tr/rss/default?cat=dunya",
+          "kategori": "Dünya",
+          "limit": 20
+        },
+        {
+          "url": "https://www.aa.com.tr/tr/rss/default?cat=bilim-teknoloji",
+          "kategori": "Teknoloji",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "ntv",
+      "ad": "NTV",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.ntv.com.tr/gundem.rss",
+          "kategori": "Gündem",
+          "limit": 20
+        },
+        {
+          "url": "https://www.ntv.com.tr/ekonomi.rss",
+          "kategori": "Ekonomi",
+          "limit": 20
+        },
+        {
+          "url": "https://www.ntv.com.tr/sporskor.rss",
+          "kategori": "Spor",
+          "limit": 20
+        },
+        {
+          "url": "https://www.ntv.com.tr/dunya.rss",
+          "kategori": "Dünya",
+          "limit": 20
+        },
+        {
+          "url": "https://www.ntv.com.tr/teknoloji.rss",
+          "kategori": "Teknoloji",
+          "limit": 20
+        },
+        {
+          "url": "https://www.ntv.com.tr/saglik.rss",
+          "kategori": "Sağlık",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "trt",
+      "ad": "TRT Haber",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.trthaber.com/sondakika.rss",
+          "kategori": "Gündem",
+          "limit": 30
+        }
+      ]
+    },
+
+    {
+      "id": "sabah",
+      "ad": "Sabah",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.sabah.com.tr/rss/gundem.xml",
+          "kategori": "Gündem",
+          "limit": 20
+        },
+        {
+          "url": "https://www.sabah.com.tr/rss/ekonomi.xml",
+          "kategori": "Ekonomi",
+          "limit": 20
+        },
+        {
+          "url": "https://www.sabah.com.tr/rss/spor.xml",
+          "kategori": "Spor",
+          "limit": 20
+        },
+        {
+          "url": "https://www.sabah.com.tr/rss/dunya.xml",
+          "kategori": "Dünya",
+          "limit": 20
+        },
+        {
+          "url": "https://www.sabah.com.tr/rss/saglik.xml",
+          "kategori": "Sağlık",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "hurriyet",
+      "ad": "Hürriyet",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.hurriyet.com.tr/rss/gundem",
+          "kategori": "Gündem",
+          "limit": 20
+        },
+        {
+          "url": "https://www.hurriyet.com.tr/rss/spor",
+          "kategori": "Spor",
+          "limit": 20
+        },
+        {
+          "url": "https://www.hurriyet.com.tr/rss/dunya",
+          "kategori": "Dünya",
+          "limit": 20
+        },
+        {
+          "url": "https://www.hurriyet.com.tr/rss/teknoloji",
+          "kategori": "Teknoloji",
+          "limit": 20
+        },
+        {
+          "url": "https://www.hurriyet.com.tr/rss/yasam",
+          "kategori": "Yaşam & Sanat",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "cnnturk",
+      "ad": "CNN Türk",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.cnnturk.com/feed/rss/ekonomi/news",
+          "kategori": "Ekonomi",
+          "limit": 20
+        },
+        {
+          "url": "https://www.cnnturk.com/feed/rss/spor/news",
+          "kategori": "Spor",
+          "limit": 20
+        },
+        {
+          "url": "https://www.cnnturk.com/feed/rss/dunya/news",
+          "kategori": "Dünya",
+          "limit": 20
+        },
+        {
+          "url": "https://www.cnnturk.com/feed/rss/teknoloji/news",
+          "kategori": "Teknoloji",
+          "limit": 20
+        },
+        {
+          "url": "https://www.cnnturk.com/feed/rss/saglik/news",
+          "kategori": "Sağlık",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "sozcu",
+      "ad": "Sözcü",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.sozcu.com.tr/feeds-rss-category-gundem",
+          "kategori": "Gündem",
+          "limit": 20
+        },
+        {
+          "url": "https://www.sozcu.com.tr/feeds-rss-category-ekonomi",
+          "kategori": "Ekonomi",
+          "limit": 20
+        },
+        {
+          "url": "https://www.sozcu.com.tr/feeds-rss-category-spor",
+          "kategori": "Spor",
+          "limit": 20
+        },
+        {
+          "url": "https://www.sozcu.com.tr/feeds-rss-category-dunya",
+          "kategori": "Dünya",
+          "limit": 20
+        },
+        {
+          "url": "https://www.sozcu.com.tr/feeds-rss-category-hayat",
+          "kategori": "Teknoloji",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "bbcturkce",
+      "ad": "BBC Türkçe",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://feeds.bbci.co.uk/turkce/rss.xml",
+          "kategori": "Dünya",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "haberturk",
+      "ad": "Habertürk",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.haberturk.com/rss",
+          "kategori": "Gündem",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "webrazzi",
+      "ad": "Webrazzi",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://webrazzi.com/kategori/yapay-zeka/feed/",
+          "kategori": "Yapay Zeka",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "shiftdelete",
+      "ad": "ShiftDelete",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://shiftdelete.net/yapay-zeka/feed",
+          "kategori": "Yapay Zeka",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "teknolojioku",
+      "ad": "Teknoloji Oku",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.teknolojioku.com/export/rss",
+          "kategori": "Teknoloji",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "fotomac",
+      "ad": "FotoMac",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.fotomac.com.tr/rss/son24saat.xml",
+          "kategori": "Spor",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "korkusuz",
+      "ad": "Korkuşuz",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.korkusuz.com.tr/feeds/rss",
+          "kategori": "Gündem",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "ahaber",
+      "ad": "A Haber",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.ahaber.com.tr/rss/news.xml",
+          "kategori": "Gündem",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "evrensel",
+      "ad": "Evrensel",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.evrensel.net/rss/haber.xml",
+          "kategori": "Gündem",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "birgun",
+      "ad": "BirGün",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.birgun.net/rss/home",
+          "kategori": "Gündem",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "halktv",
+      "ad": "Halk TV",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://halktv.com.tr/export/rss",
+          "kategori": "Gündem",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "euronews",
+      "ad": "Euronews",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://tr.euronews.com/rss",
+          "kategori": "Gündem",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "milliyet",
+      "ad": "Milliyet",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.milliyet.com.tr/rss/rssnew/sondakikarss.xml",
+          "kategori": "Son Dakika",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "aydinlik",
+      "ad": "Aydınlık",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.aydinlik.com.tr/feed",
+          "kategori": "Gündem",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "odatv",
+      "ad": "Oda TV",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.odatv.com/rss.xml",
+          "kategori": "Gündem",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "internethaber",
+      "ad": "İnternet Haber",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.internethaber.com/rss",
+          "kategori": "Gündem",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "sozcusondakika",
+      "ad": "Sözcü Son Dakika",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.sozcu.com.tr/feeds-son-dakika",
+          "kategori": "Son Dakika",
+          "limit": 16
+        }
+      ]
+    },
+
+    {
+      "id": "mynet",
+      "ad": "MyNet",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.mynet.com/haber/rss/sondakika",
+          "kategori": "Son Dakika",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "artigercek",
+      "ad": "Artı Gerçek",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://artigercek.com/export/rss",
+          "kategori": "Gündem",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "duvar",
+      "ad": "Gazete Duvar",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.gazeteduvar.com.tr/export/rss",
+          "kategori": "Gündem",
+          "limit": 20
+        }
+      ]
+    },
+
+    {
+      "id": "enkocaeli",
+      "ad": "En Kocaeli",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.enkocaeli.com/rss.xml",
+          "kategori": "Kocaeli",
+          "limit": 30
+        }
+      ]
+    },
+
+    {
+      "id": "ozgurkocaeli",
+      "ad": "Özgür Kocaeli",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.ozgurkocaeli.com.tr/rss.xml",
+          "kategori": "Kocaeli",
+          "limit": 30
+        }
+      ]
+    },
+
+    {
+      "id": "demokratkocaeli",
+      "ad": "Demokrat Kocaeli",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://demokratkocaeli.com/rss.xml",
+          "kategori": "Kocaeli",
+          "limit": 30
+        }
+      ]
+    },
+
+    {
+      "id": "bugunkocaeli",
+      "ad": "Bugün Kocaeli",
+      "aktif": true,
+      "beslemeler": [
+        {
+          "url": "https://www.bugunkocaeli.com.tr/rss",
+          "kategori": "Kocaeli",
+          "limit": 30
+        }
+      ]
+    }
+  ]
+}

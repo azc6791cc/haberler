@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android TV ana ekran banner'ı (zorunlu ölçü 320x180) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="180dp"
+    android:viewportWidth="320"
+    android:viewportHeight="180">
+
+    <!-- Arka plan -->
+    <path
+        android:pathData="M0,0h320v180h-320z"
+        android:fillColor="#050510" />
+
+    <!-- Marka işareti -->
+    <path
+        android:pathData="M40,52h56v17h-19v45h-19v-45h-18z"
+        android:fillColor="#00F5FF" />
+    <path
+        android:pathData="M104,110m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0"
+        android:fillColor="#FF2D7B" />
+
+    <!-- "HABER TV" yazısı (yol olarak çizilmiş kabartma metin) -->
+    <path
+        android:pathData="M136,50h9v22h12v-22h9v22h12v-22h9v31h-51z"
+        android:fillColor="#FFFFFF" />
+    <path
+        android:pathData="M196,50h34v8h-25v8h22v8h-22v15h-9z"
+        android:fillColor="#FFFFFF" />
+
+    <!-- Alt çizgi -->
+    <path
+        android:pathData="M40,132h240v3h-240z"
+        android:fillColor="#00F5FF" />
+</vector>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Kenar çubuğu yok, durum/nav çubuğu gizli: tam ekran TV deneyimi -->
+    <style name="Theme.HaberTV" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/arka_plan</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+</resources>

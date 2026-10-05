@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# Android / Gradle
+.gradle/
+/android/local.properties
+/android/.idea/
+/android/build/
+/android/app/build/
+/android/captures/
+*.iml
+
+# İmza anahtarı — ASLA commit edilmemeli
+/android/keystore.properties
+*.jks
+*.keystore

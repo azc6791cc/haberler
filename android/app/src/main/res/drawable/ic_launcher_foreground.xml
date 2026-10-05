@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- HABER TV logosu: stil dosyasındaki marka işaretinin sadeleştirilmiş hâli.
+     Güvenli alan (safe zone) 108x108 dp içinde 66x66 dp merkez alanıdır. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- "T" harfi (antenna formu) -->
+    <path
+        android:pathData="M36,34h36v11h-12v29h-12v-29h-12z"
+        android:fillColor="#00F5FF" />
+
+    <!-- Yayın (canlı) noktası -->
+    <path
+        android:pathData="M74,74m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0"
+        android:fillColor="#FF2D7B" />
+
+    <!-- Yayın dalgaları -->
+    <path
+        android:pathData="M82,62c3,3 3,9 0,12"
+        android:strokeColor="#FF2D7B"
+        android:strokeWidth="3"
+        android:strokeLineCap="round" />
+</vector>

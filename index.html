@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="tr" data-tema="koyu" data-vurgu="cyan" data-yazi="orta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HABER TV — 31 kaynaktan, her 30 dakikada bir otomatik güncellenen premium haber deneyimi.">
+    <meta name="theme-color" content="#050510">
+    <title>HABER TV — Premium Haber</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23050510'/%3E%3Cpath d='M22 25h56v13H57v37H43V38H22z' fill='%2300f5ff'/%3E%3Ccircle cx='78' cy='78' r='7' fill='%23ff2d7b'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Arka plan katmanları -->
+    <div class="bg-animated" aria-hidden="true"></div>
+    <div id="partikuller" aria-hidden="true"></div>
+    <div class="scan-line" aria-hidden="true"></div>
+
+    <!-- Açılış ekranı -->
+    <div class="splash-screen" id="splash">
+        <div class="splash-logo">HABER TV</div>
+        <div class="splash-line"></div>
+        <div class="splash-subtitle">Premium Haber Deneyimi</div>
+        <div class="splash-loader"></div>
+    </div>
+
+    <!-- Okuma ilerlemesi -->
+    <div id="ilerleme-cubugu" aria-hidden="true"></div>
+
+    <!-- Üst çubuk -->
+    <nav class="navbar">
+        <a class="navbar-brand" href="#" id="marka">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="marka-grup">
+                <span class="marka-yazi">HABER TV</span>
+                <span class="marka-alt">PREMIUM HABER</span>
+            </span>
+        </a>
+        <div class="nav-sag">
+            <div class="saat-kutu" id="saat-kutu" title="Türkiye saati">
+                <span class="saat-sayac" id="saat">--:--:--</span>
+                <span class="saat-tarih" id="tarih-gun"></span>
+            </div>
+            <div class="arama-saraci" id="arama-saraci">
+                <svg class="arama-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                <input type="search" id="arama" placeholder="Haber ara…  ( / )" autocomplete="off" aria-label="Haberlerde ara">
+            </div>
+            <button class="nav-btn" id="btn-yenile" title="Verileri yenile (R)" aria-label="Verileri yenile">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36M21 3v6h-6"/></svg>
+            </button>
+            <button class="nav-btn" id="btn-tema" title="Tema değiştir" aria-label="Tema değiştir">🌙</button>
+            <button class="nav-btn nav-btn-ayarlar" id="btn-ayarlar" title="Ayarlar" aria-label="Ayarları aç">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Kategori çubuğu -->
+    <div class="cat-nav-wrap">
+        <button class="cat-nav-ok cat-nav-ok-sol" id="cat-ok-sol" aria-label="Önceki kategoriler" tabindex="-1">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+        </button>
+        <div class="category-nav" id="category-nav" role="tablist" aria-label="Kategoriler"></div>
+        <button class="cat-nav-ok cat-nav-ok-sag" id="cat-ok-sag" aria-label="Sonraki kategoriler" tabindex="-1">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg>
+        </button>
+    </div>
+
+    <!-- Piyasa bandı (anlık veri) -->
+    <div class="market-strip" id="market-strip" aria-label="Piyasa verileri">
+        <div class="market-strip-inner" id="market-strip-inner"></div>
+    </div>
+
+    <!-- Son dakika bandı -->
+    <div class="ticker-wrap" id="ticker-wrap" style="display:none" aria-label="Son dakika haberleri">
+        <span class="ticker-label">⚡ Son Dakika</span>
+        <div class="ticker-track" id="ticker-track"></div>
+    </div>
+
+    <!-- Ana içerik -->
+    <main class="main-container">
+        <section id="ana-sayfa">
+            <div class="toolbar">
+                <div class="toolbar-sol">
+                    <span class="sonuc-sayac" id="sonuc-sayac">Haberler yükleniyor…</span>
+                    <span class="son-guncelleme" id="son-guncelleme"></span>
+                </div>
+                <div class="toolbar-sag">
+                    <select id="sirala" class="sirala-sec" aria-label="Sıralama">
+                        <option value="yeni">En yeni</option>
+                        <option value="eski">En eski</option>
+                    </select>
+                    <div class="gorunum-dogrultu">
+                        <button class="gorunum-btn active" data-gorunum="izgara" title="Izgara görünüm" aria-label="Izgara görünüm">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg>
+                        </button>
+                        <button class="gorunum-btn" data-gorunum="liste" title="Liste görünüm" aria-label="Liste görünüm">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="4" width="18" height="4" rx="1.5"/><rect x="3" y="10" width="18" height="4" rx="1.5"/><rect x="3" y="16" width="18" height="4" rx="1.5"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="news-grid" id="haberler-listesi"></div>
+        </section>
+
+        <!-- Detay sayfası -->
+        <section id="detay-sayfasi" style="display:none">
+            <button class="back-btn" id="btn-geri">
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                Haberlere Dön
+            </button>
+            <div class="detail-container">
+                <div class="detail-hero" id="detay-hero">
+                    <img id="detay-resim" src="" alt="" style="display:none">
+                    <div class="detail-hero-overlay"></div>
+                    <div class="detail-hero-content">
+                        <div class="detay-meta" id="detay-meta"></div>
+                        <h1 class="detail-title" id="detay-baslik"></h1>
+                    </div>
+                </div>
+                <div class="detail-body" id="detay-icerik"></div>
+                <div class="detail-aksiyonlar" id="detay-aksiyonlar"></div>
+                <div class="ilgili-blok" id="ilgili-blok">
+                    <h3 class="ilgili-baslik">Benzer Haberler</h3>
+                    <div class="ilizi-izgara" id="ilgili-liste"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Alt bilgi -->
+    <footer class="alt-bilgi">
+        <div class="alt-izgara">
+            <div class="alt-kolon alt-hakkinda">
+                <div class="alt-marka"><span class="dot"></span> HABER TV</div>
+                <p>31 haber kaynağından (AA, NTV, TRT Haber, Sabah, Hürriyet, CNN Türk, Sözcü, BBC Türkçe, Habertürk, Webrazzi, ShiftDelete, A Haber, Korkuşuz, Milliyet, MyNet, İnternet Haber, Euronews, Artı Gerçek, FotoMac, Teknoloji Oku, BirGün, Evrensel, Gazete Duvar, Halk TV, Aydınlık, Oda TV, Sözcü Son Dakika ve 4 Kocaeli gazetesi) toplanan haberler, otomatik haber botu ile birleştirilir, tekilleştirilir ve sitede yayınlanır.</p>
+            </div>
+            <div class="alt-kolon">
+                <h4>Kaynak Durumu</h4>
+                <ul class="kaynak-liste" id="kaynak-liste"></ul>
+            </div>
+            <div class="alt-kolon">
+                <h4>Veri & Akışlar</h4>
+                <ul class="alt-linkler" id="alt-linkler"></ul>
+                <p class="bot-bilgi" id="bot-bilgi"></p>
+            </div>
+        </div>
+        <div class="alt-alt">
+            <span>© 2026 HABER TV — Haber botu v2 otomatik güncellemektedir.</span>
+            <span class="alt-kaynak-not">Haber metinleri ilgili kurumlara aittir; telif gereği özetlenerek sunulur.</span>
+        </div>
+    </footer>
+
+    <!-- Ayarlar çekmecesi -->
+    <div class="drawer-arki" id="drawer-arki" hidden></div>
+    <aside class="ayarlar-cercevesi" id="ayarlar-cercevesi" aria-label="Ayarlar">
+        <div class="cerceve-baslik">
+            <span class="cerceve-baslik-yazi">⚙ Ayarlar</span>
+            <button class="cerceve-kapat" id="btn-cerceve-kapat" aria-label="Ayarları kapat">✕</button>
+        </div>
+        <div class="cerceve-guv">
+            <div class="ayr-grup">
+                <h5>Görünüm</h5>
+                <div class="ayr-satir">
+                    <label>Tema</label>
+                    <div class="ayr-secenekler" data-ayar="tema">
+                        <button data-deger="koyu">🌙 Koyu</button>
+                        <button data-deger="acik">☀️ Açık</button>
+                    </div>
+                </div>
+                <div class="ayr-satir">
+                    <label>Vurgu rengi</label>
+                    <div class="ayr-secenekler vurgu-secenekleri" data-ayar="vurgu">
+                        <button data-deger="cyan" class="vurgu-takici cyan" title="Camgöbeği"></button>
+                        <button data-deger="mor" class="vurgu-takici mor" title="Mor"></button>
+                        <button data-deger="pembe" class="vurgu-takici pembe" title="Pembe"></button>
+                        <button data-deger="yesil" class="vurgu-takici yesil" title="Yeşil"></button>
+                        <button data-deger="turuncu" class="vurgu-takici turuncu" title="Turuncu"></button>
+                    </div>
+                </div>
+                <div class="ayr-satir">
+                    <label>Yazı boyutu</label>
+                    <div class="ayr-secenekler" data-ayar="yazi">
+                        <button data-deger="kucuk">A−</button>
+                        <button data-deger="orta">A</button>
+                        <button data-deger="buyuk">A+</button>
+                    </div>
+                </div>
+                <div class="ayr-satir">
+                    <label>Okuma rahatlığı</label>
+                    <div class="ayr-secenekler okuma-secenekleri" data-ayar="okuma">
+                        <button data-deger="standart">Standart</button>
+                        <button data-deger="rahat">Rahat okuma</button>
+                        <button data-deger="belirgin">Belirgin metin</button>
+                    </div>
+                </div>
+            </div>
+            <div class="ayr-grup">
+                <h5>İçerik & Anlık Veri</h5>
+                <div class="ayr-satir anahtar-satir">
+                    <label>Haber görselleri</label>
+                    <button class="anahtar" data-ayar="gorsel" role="switch"></button>
+                </div>
+                <div class="ayr-satir anahtar-satir">
+                    <label>Son dakika bandı</label>
+                    <button class="anahtar" data-ayar="ticker" role="switch"></button>
+                </div>
+                <div class="ayr-satir anahtar-satir">
+                    <label>Piyasa bandı (döviz, altın, kripto, BIST)</label>
+                    <button class="anahtar" data-ayar="piyasa" role="switch"></button>
+                </div>
+                <div class="ayr-satir anahtar-satir">
+                    <label>Partikül animasyonları</label>
+                    <button class="anahtar" data-ayar="partikuler" role="switch"></button>
+                </div>
+                <div class="ayr-satir">
+                    <label>Otomatik yenileme</label>
+                    <div class="ayr-secenekler" data-ayar="yenile">
+                        <button data-deger="kapali">Kapalı</button>
+                        <button data-deger="1">1 dk</button>
+                        <button data-deger="5">5 dk</button>
+                        <button data-deger="15">15 dk</button>
+                    </div>
+                </div>
+            </div>
+            <div class="ayr-grup">
+                <h5>Çevrimiçi Güncelleme</h5>
+                <div class="ayr-satir" style="align-items:flex-start;flex-direction:column">
+                    <label for="uzak-url">Haber kaynağı (URL)</label>
+                    <input type="url" id="uzak-url" inputmode="url" placeholder="https://kullanici.github.io/haberler/"
+                        style="width:100%;background:var(--bg-glass);border:1px solid var(--border-color);border-radius:10px;color:var(--text-primary);padding:10px 12px;font-size:0.82rem;outline:none"
+                        aria-label="Uzak haber kaynağı adresi">
+                    <small style="color:var(--text-muted);font-size:0.72rem;line-height:1.5">APK açılışta önce buradan çeker; ulaşamazsa gömülü habere düşer. Boş bırakılırsa yalnızca gömülü veri kullanılır. Kaynak: <strong id="veri-kaynagi" style="color:var(--text-primary)">—</strong></small>
+                </div>
+                <button class="neon-btn" id="btn-uzak-kaydet" style="margin-top:2px"><span>💾 Kaydet ve Yenile</span></button>
+            </div>
+            <div class="ayr-grup">
+                <h5>Bot Durumu</h5>
+                <div class="bot-kart">
+                    <div class="bot-kart-satir"><span>Son güncelleme</span><strong id="bot-son-guncelleme">—</strong></div>
+                    <div class="bot-kart-satir"><span>Toplam haber</span><strong id="bot-toplam">—</strong></div>
+                    <div class="bot-kart-satir"><span>Aktif kaynak</span><strong id="bot-kaynak">—</strong></div>
+                    <div class="bot-kart-satir"><span>Süre</span><strong id="bot-sure">—</strong></div>
+                </div>
+                <button class="neon-btn cerceve-yenile" id="btn-cerceve-yenile"><span>⚡ Verileri Şimdi Yenile</span></button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Bildirim -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

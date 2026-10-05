@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Uygulamanın koyu lacivert arka planı (style.css ile aynı) -->
+    <color name="arka_plan">#FF050510</color>
+    <color name="vurgu">#FF00F5FF</color>
+</resources>

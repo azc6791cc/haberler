@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SABİT test verisi. Canlı beslemeden ÜRETİLMEZ; testlerin kırılmaması için
+     elle korunur. Uzun açıklamalı besleme -> tam metin üretilmeli. -->
+<rss version="2.0"><channel><title>Örnek Kaynak</title>
+<item>
+  <title>Deprem Ardından Yardım Çalışması Sürüyor</title>
+  <link>https://ornek.com/haber/deprem-yardim-1</link>
+  <category>Gündem</category>
+  <description><![CDATA[<p>Bölgede deprem sonrası arama ve kurtarma çalışmaları devam ediyor. AFAD ekipleri enkaz altında kalan vatandaşlara ulaşmaya çalışıyor, koordinasyon merkezleri sahada düzenli aralıklarla bilgilendirme yapıyor. Ekiplerin çalışmaları gece gündüz sürüyor.</p>
+
+<p>Yetkililer, hasar tespit çalışmalarının sürdüğünü ve bazı binaların güvenli olmadığını belirtti. Vatandaşlardan bölgeden uzak durmaları ve duyuruları takip etmeleri istendi. Enkaz altında kalan kişi sayısının netleşmesi için çalışma sürüyor.</p>
+
+<p>Çevre illerden gelen ekipler de sahada görev alarak arama kurtarma faaliyetlerine katkı sağlıyor. Sahada kurulan çadır kamplarında vatandaşlara sıcak yemek ve battaniye dağıtılıyor. Sağlık ekipleri ise yaralıların naklinde görev alıyor.</p>]]></description>
+  <pubDate>Sun, 04 Oct 2026 10:00:00 +0300</pubDate>
+</item>
+</channel></rss>

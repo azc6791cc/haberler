@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SABİT test verisi. Kısa açıklamalı besleme -> tam metin boş olmalı. -->
+<rss version="2.0"><channel><title>Örnek Kaynak</title>
+<item>
+  <title>Kısa Açıklamalı Haber Başlığı Burada</title>
+  <link>https://ornek.com/haber/kisa-haber-2</link>
+  <category>Gündem</category>
+  <description>Kısa bir özet cümlesi.</description>
+  <pubDate>Sun, 04 Oct 2026 10:00:00 +0300</pubDate>
+</item>
+</channel></rss>
