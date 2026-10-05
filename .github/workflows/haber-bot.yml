@@ -43,6 +43,7 @@ jobs:
           cp haberler.json bot-raporu.json config.json public/
           cp -r assets public/
           cp feeds/*.xml public/feeds/
+          touch public/.nojekyll
 
       - name: Pages'e yükle
         uses: actions/upload-pages-artifact@v3
